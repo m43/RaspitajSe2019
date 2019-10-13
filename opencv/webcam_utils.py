@@ -87,8 +87,10 @@ def webcam_stream(stream_source=0, width=1280, height=720, image_handle=None, fl
 
         if wait_key and key == 'q':
             print("done")
-            exit(0)
+            break
 
+    cv2.destroyAllWindows()
+    
     print("[stream end]")
 
 
